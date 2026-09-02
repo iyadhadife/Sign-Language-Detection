@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réglages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="light-mode">
+    <div class="settings-page">
+        <div class="profile-info">
+            <img src="https://via.placeholder.com/150" alt="Admin">
+            <h2>Admin</h2>
+            <p>admin@gmail.com</p>
+        </div>
+        <div class="settings-section">
+            <h3>Information de compte</h3>
+            <a href="{{ url_for('change_password') }}">Changer le mot de passe</a>
+            <a href="{{ url_for('edit_profile') }}">Editer le profil</a>
+        </div>
+        <div class="settings-section">
+            <h3>Support</h3>
+            <a href="{{ url_for('tutorial') }}">Tutorial</a>
+            <a href="{{ url_for('avis') }}">Laisser un avis</a>
+        </div>
+        <div class="theme-toggle">
+            <button onclick="setTheme('light')">Clair</button>
+            <button onclick="setTheme('dark')">Sombre</button>
+        </div>
+        <a href="{{ url_for('logout') }}" class="logout-button">Se déconnecter</a>
+    </div>
+    <footer>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laisser un avis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="feedback-form">
+        <h1>Laisser un avis</h1>
+        <p>Bienvenue sur la page retour client</p>
+        <div class="contact-options">
+            <div class="contact-option">
+                <img src="{{ url_for('static', filename='call_icon.png') }}" alt="Appellez-nous">
+                <p>Appellez-nous</p>
+            </div>
+            <div class="contact-option">
+                <img src="{{ url_for('static', filename='text_icon.png') }}" alt="Textez-nous">
+                <p>Textez-nous</p>
+            </div>
+            <div class="contact-option">
+                <img src="{{ url_for('static', filename='faq_icon.png') }}" alt="Recherche FAQs">
+                <p>Recherche FAQs</p>
+            </div>
+        </div>
+        <form method="POST" action="{{ url_for('avis') }}" enctype="multipart/form-data">
+            <input type="text" name="pseudo" placeholder="Votre pseudo" required>
+            <input type="email" name="email" placeholder="Votre adresse mail" required>
+            <textarea name="content" placeholder="Contenu de votre avis" required></textarea>
+            <label for="image-upload" class="image-upload-label">
+                <img class='img2' src="{{ url_for('static', filename='attach_icon.png') }}" alt="Joindre image">
+                <span>Joindre image (optionnel)</span>
+            </label>
+            <input type="file" id="image-upload" name="image" accept="image/*" style="display: none;">
+            <button type="submit">Envoyer l'avis</button>
+        </form>
+    </div>
+    <footer>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </footer>
+</body>
+</html>

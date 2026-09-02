@@ -1,0 +1,303 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mode clair */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #333;
+    color: #44B38B;
+}
+
+/* Styles pour le menu */
+.menu {
+    background-color: #44B38B;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu-item img {
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    color: #44B38B;
+    font-size: 1.2em;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+}
+
+footer img {
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        width: 80%;
+    }
+}
+
+/* Styles pour le formulaire d'avis */
+.feedback-form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feedback-form h1 {
+    color: #44B38B;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-form button {
+    background-color: #44B38B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.feedback-form button:hover {
+    background-color: #44B38B;
+}
+
+.image-upload-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.image-upload-label img {
+    margin-right: 10px;
+}
+
+/* Styles pour la page de réglages */
+.settings-page {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.settings-page h3 {
+    margin-top: 20px;
+}
+
+.profile-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    margin: 10px 0 5px;
+}
+
+.settings-section {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.settings-section a {
+    display: block;
+    padding: 10px 0;
+    color: #007BFF;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.settings-section a:last-child {
+    border-bottom: none;
+}
+
+.theme-toggle {
+    margin-top: 20px;
+}
+
+.theme-toggle button {
+    background-color: #44B38B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.theme-toggle button:hover {
+    background-color: #44B38B;
+}
+
+.logout-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.logout-button:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+}
+
+footer img {
+    width: 100px;
+}
+
+/* Styles pour la page de politique de confidentialité */
+.policy-page {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.policy-page h1, .policy-page h2, .policy-page h3 {
+    color: #44B38B;
+}
+
+.policy-page p, .policy-page ul {
+    margin: 10px 0;
+}
+
+.policy-page ul {
+    padding-left: 20px;
+}
+
+/* Styles pour le bouton dans le coin supérieur gauche */
+.corner-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #44B38B;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.corner-button:hover {
+    background-color: #44B38B;
+}
+
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.img2{
+    max-width: 50px;
+    max-height: 50px;
+}

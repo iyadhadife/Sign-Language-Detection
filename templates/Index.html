@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('new_page') }}" class="corner-button">Test</a>
+    <div class="menu">
+        <h1>Menu</h1>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <a href="{{ url_for('traduction') }}">
+                    <img src="{{ url_for('static', filename='translation_icon.png') }}" alt="Traduction Icon">
+                    <span>- TRADUCTION -</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ url_for('avis') }}">
+                    <img src="{{ url_for('static', filename='review_icon.png') }}" alt="Avis Icon">
+                    <span>- AVIS -</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ url_for('reglages') }}">
+                    <img src="{{ url_for('static', filename='settings_icon.png') }}" alt="Réglages Icon">
+                    <span>- REGLAGES -</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ url_for('politique') }}">
+                    <img src="{{ url_for('static', filename='privacy_icon.png') }}" alt="Politique de Confidentialité Icon">
+                    <span>- POLITIQUE DE CONFIDENTIALITE -</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </footer>
+</body>
+</html>
+
