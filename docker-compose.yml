@@ -1,0 +1,19 @@
+services:
+  signia:
+    build: .
+    image: signia:latest
+    container_name: signia
+    ports:
+      - "8000:8000"
+    volumes:
+      # Recorded clips, trained models and feedback survive container restarts.
+      - signia-data:/data
+    environment:
+      # MediaPipe Holistic complexity: 0 = fastest, 1 = balanced (default), 2 = most accurate.
+      SIGNIA_MODEL_COMPLEXITY: "1"
+      # Limit TensorFlow CPU threads (0 = automatic).
+      SIGNIA_TF_THREADS: "0"
+    restart: unless-stopped
+
+volumes:
+  signia-data:
