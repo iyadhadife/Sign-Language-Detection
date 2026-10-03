@@ -4,6 +4,8 @@ SignIA translates sign language from a webcam into text in real time. It tracks 
 **MediaPipe Holistic** and classifies 30-frame sequences of keypoints with a lightweight **LSTM** network. Everything
 runs on the **CPU**, so no GPU is needed.
 
+![Live sign recognition demo](docs/demo.gif)
+
 ![Overview](docs/overview.png)
 
 ## Features
