@@ -1,0 +1,10 @@
+# CPU-only inference & training stack
+tensorflow-cpu==2.16.1; platform_machine == "x86_64" or platform_machine == "AMD64"
+# No tensorflow-cpu wheels exist for ARM (e.g. Docker on Apple Silicon); the regular build is CPU-only there.
+tensorflow==2.16.1; platform_machine == "aarch64" or platform_machine == "arm64"
+keras==3.3.3
+mediapipe==0.10.14
+numpy==1.26.4
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.12
